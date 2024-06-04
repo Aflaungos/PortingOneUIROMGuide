@@ -147,7 +147,7 @@
 
     move-result-object v0
 
-    const-string v2, "CscFeature_Common_SupportZProjectFunctionInGlobal"
+    const-string v2, "CscFeature_Common_SupportTheFreakingSpeedMeter"
 
     invoke-virtual {v0, v2, v1}, Lcom/samsung/android/feature/SemCscFeature;->getBoolean(Ljava/lang/String;Z)Z
 

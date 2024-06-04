@@ -58,7 +58,7 @@
 
     move-result-object v0
 
-    const-string v1, "CscFeature_Common_SupportZProjectFunctionInGlobal"
+    const-string v1, "CscFeature_Common_SupportTheFreakingSpeedMeter"
 
     const/4 v2, 0x0
 
