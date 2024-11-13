@@ -1,5 +1,5 @@
 # M23 Ultra for Samsung Galaxy M23/F23 5G
-A complete OneUI 6 ROM with added flagship features
+A complete OneUI 6 ROM with added flagship features based on S23 firmware
 
 # Supported devices
 - Samsung Galaxy M23 5G
