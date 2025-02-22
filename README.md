@@ -25,6 +25,7 @@ A complete OneUI 6 ROM with added flagship features based on S23 firmware
     - ⚠️ Note the X means there are more files, like 31, 32, 33...
   - `system_dlkm/etc` folder: Replace the build.prop file from with your device's file.
 - Inside the `system` partition of the ported device:
+  - Replace the `build.prop` and `default.prop` files from ported device `system` partition with your device's files.
   - Inside the `priv-app` folder, copy over from the repo Applock, wallpaper-res (optional) and SSecure.
   - Replace HybridRadio with your device's if you care about radio.
   - Inside the `lib` and `lib64` folders, copy over FM radio files from your device's.
@@ -32,6 +33,7 @@ A complete OneUI 6 ROM with added flagship features based on S23 firmware
   - Copy over the `default-permissions` folder from your device to ported device's `system` partition.
   - Inside the `app` folder, copy over all Gallery related folders from the repo to your system. Copy over FunModeSDK from your device to ported device's `system/app` folder.
   - Inside the `etc/selinux` folder, compare it with your device's. If you notice differences in this folder it may cause bootloops and if that's the case, replace the ported device files with your device's files.
+  - Inside of your device 'vendor' folder, replace the selinux folder with the ported device's selinux folder.
 - Now check through this repo's commit history for stuff you wish to add:
 - So, I start from [here](https://github.com/Aflaungos/M23Ultra/commits/Android13?before=b32d24ce9b931940855112b6e3a5db993b77f6b2+105&branch=Android13&qualified_name=refs%2Fheads%2FAndroid13)
 - Locate the commit "Adding stock Android 13 files" and look through all the changes and implement them. Here's the ones that will be relevant:
