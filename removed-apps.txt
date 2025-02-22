@@ -58,7 +58,7 @@ priv-app/SamsungPass
 priv-app/Upday
 
 # Vendor
-bin/cass
-bin/vaultkeeperd
+etc/cass.rc
+etc/vaultkeeperd.rc
 etc/vintf/manifest/vaultkeeper_manifest.xml
 
