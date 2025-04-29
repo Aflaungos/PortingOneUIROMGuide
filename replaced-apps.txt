@@ -1,5 +1,7 @@
 # Replaced Apps 
-Here is the list of all the apps replaced for this ROM. Use stock ROM files
+Here is the list of all the apps replaced. `Use stock ROM files`
+Any files you don't have just ignore.
+⚠️ Some files vary by name and driver type. do some research using HWInfo app for driver names.
 
 ##System
 app/NfcNci
