@@ -23,7 +23,7 @@ A complete OneUI ROM Porting Guide Noob Friendly
   - Copy over the `default-permissions` folder from your device to ported device's `system` partition.
   - Inside the `app` folder, copy over all Gallery related folders from the repo to your system. Copy over FunModeSDK from your device to ported device's `system/app` folder.
   - Inside the `etc/selinux` folder, compare it with your device's. If you notice differences in this folder it may cause bootloops and if that's the case, replace the ported device files with your device's files.
-## Inside of your device 'vendor' folder
+## [OPTIONAL/ If having SELinux issues] Inside of your device 'vendor' folder
 - Replace the selinux folder with the ported device's selinux folder.
 ## Packaging
 - After completing all the changes you want, re-pack `odm`, `product` and `vendor` from your device's project.
