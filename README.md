@@ -1,14 +1,14 @@
 # Porting OneUI ROM Guide
-A complete OneUI ROM Porting Guide Noob Friendly
-⚠️ If you are too lazy to read all of this, give up or wait for a dev to actually port a ROM for you!
-# Special Thanks
+A complete OneUI ROM Porting Guide Noob Friendly✅
+- ⚠️ If you are too lazy to read all of this, give up or wait for a dev to actually port a ROM for you!
+# ✨ Special Thanks
 **Huge thanks to these people:**
 - **@ShaDisNX255** for his guide!
 - **@furbanoramos24** for explaining me some stuff about SELinux!
 - **@salvogiangri and collaborators** for UN1CA, which gave me the knowledge to learn how to port!
-# Tutorial
-## 1. Unpacking
-- Extract the stock AP from your device and the ported device (AP has the patition `super` which has `system`, `product`, `odm` and `vendor` inside).
+# ⚙️ Tutorial
+## 1. Unpacking 🪄
+- Extract the stock AP from your device and the ported device (AP has the patition `super` which has `system`, `product`, `odm` and `vendor` inside) with an Android Kitchen like CRB.
   - ⚠️ Skip extracting `vendor_boot` from yours and ported devices.
 - Replace all the files indicated in the replaced-apps.txt: [replaced-apps.txt](https://github.com/Aflaungos/PortingOneUIROMGuide/blob/main/replaced-apps.txt) in the ported device system folder (should be under CRB Folder/Projects/"YOUR_PROJECT_NAME"/ROM)
 - [OPTIONAL/DEBLOATING] Open [removed-apps.txt](https://github.com/Aflaungos/PortingOneUIROMGuide/blob/main/removed-apps.txt) and delete all the apps in the list from the ported device's `system` partition.
@@ -52,7 +52,7 @@ A complete OneUI ROM Porting Guide Noob Friendly
   - Inside the `app` folder, copy over all Gallery related folders from the repo to your system. Copy over FunModeSDK from your device to ported device's `system/app` folder.
   - Inside the `etc/selinux` folder, compare it with your device's. If you notice differences in this folder it may cause bootloops and if that's the case, replace the ported device files with your device's files.
 
-## 6. Packaging
+## 6. Packaging 💾📀
 - After completing all the changes you want, re-pack `odm`, `product` and `vendor` from your device's project as sparse (new.dat).
 - Re-pack `system` (again as sparse (new.dat)) from ported device's project, and copy over the newly generated `system.img` file to your device's project Build folder.
 - Repack `super.img` as a `raw` image inside device's project and compress the new `super.img` into an `xz` file using 7-zip
@@ -60,8 +60,8 @@ A complete OneUI ROM Porting Guide Noob Friendly
 ## 7. Troubleshooting packaging
 - If you get a out of space error during packaging a partition or super, be sure to debloat it using CRB or inside app/priv-app! I like to use Spacesniffer to see exactly which programs are the biggest in size and if possible remove them. Do not delete any app as some of them are important for the ROM to work, do a research on each app!
 
-## 8. Installing
+## 8. Installing ⬇️
 - Extract super.img from xz file and flash using TWRP or any other custom recovery as image file in `Super` Partition
 
-## 9. Done
-- Congratulations! You have finished this guide, and should probably have a working OneUI port.
+## 9. Done 🎉
+- **Congratulations! You have finished this guide, and should probably have a working OneUI port.**
