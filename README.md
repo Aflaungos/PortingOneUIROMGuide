@@ -11,9 +11,24 @@ A complete OneUI ROM Porting Guide Noob Friendly
 ## Inside the `system_ext` partition of the ported device:
   - Check if any 'FM radio' libs are missing and port them from your device to it.
   - Replace the build.prop file with your device's file inside the `etc` folder.
-  - Inside the `etc/selinux` folder, remove all lines containing "fabriccrypto" from inside /system/system_ext/etc/selinux/mapping/3X.0.cil files.
-    - ⚠️ Note the X means there are more files, like 31, 32, 33...
-  - `system_dlkm/etc` folder: Replace the build.prop file from with your device's file.
+  - Inside `system_ext/etc/selinux`, follow these steps to fix SELinux based on the OneUI version:
+    1. Check `plat_sepolicy_vers.txt` for which vndk version you have (ex: 30 = VNDK30, 31 = VNDK31 and so on). Note the number down as `YOURNUMBER`.
+    2. Inside `vendor/etc/selinux/plat_pub_versioned.cil`, check with each line in the table below if you have it on this file, **and if not** remove all lines that have this line referenced from this file: `system_ext/etc/selinux/mapping/<YOURNUMBER>.cil`
+    3. These are the lines to delete:
+    - OneUI 5/5.1              | OneUI 6/6.1/6.1.1             | OneUI 7
+      ------------------------:|:-----------------------------:|:-----------------------
+      audiomirroring           | hal_dsms_default              | I haven't found out yet
+      audiomirroring_exec      | hal_dsms_default_exec         |
+      audiomirroring_service   | proc_compaction_proactiveness |
+      fabriccrypto             | sbauth                        |
+      fabriccrypto_exec        | sbauth_exec                   |
+      fabriccrypto_data_file   |                               |
+      hal_dsms_service         |                               |
+      uwb_regulation_skip_prop |                               |
+  - If comparing inside the folder `system_ext/apex` from port and your device ROM, you notice that you have a different number (which is the VNDK version of your device) you have to replace it with yours.
+    - For example, `com.android.vndk.v30.apex` is yours and `com.android.vndk.v31/2/3/4.apex`, replace it with yours!
+## Inside `system_dlkm/etc` folder:
+  - Replace the build.prop file from with your device's file.
 ## Inside the `system` partition of the ported device:
   - Replace the `build.prop` and `default.prop` files from ported device `system` partition with your device's files.
   - Inside the `priv-app` folder, copy over from the repo Applock, wallpaper-res (optional) and SSecure.
@@ -35,5 +50,7 @@ A complete OneUI ROM Porting Guide Noob Friendly
 - Replace the selinux folder with the ported device's selinux folder.
 
 # Special Thanks
-- Huge thanks to @ShaDisNX255 for his guide.
-- @furbanoramos24 for explaining me some stuff about SELinux
+**Huge thanks to these people:**
+- **@ShaDisNX255** for his guide!
+- **@furbanoramos24** for explaining me some stuff about SELinux!
+- **@salvogiangri** for UN1CA, which gave me the knowledge to learn how to port!
