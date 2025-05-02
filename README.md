@@ -37,7 +37,7 @@ A complete OneUI ROM Porting Guide Noob Friendly✅
 
 ## 3. `system_ext`: Fixing APEX
   - If comparing inside the folder `system_ext/apex` from port and your device ROM, you notice that you have a different number (which is the VNDK version of your device) you have to replace it with yours.
-    - For example, `com.android.vndk.v30.apex` is yours and `com.android.vndk.v31/32/33/34.apex`, replace it with yours!
+    - For example, `com.android.vndk.v30.apex` is yours and `com.android.vndk.v31/32/33/34.apex` in the port, replace it!
 
 ## 4. Inside `system_dlkm/etc` folder
   - Replace the build.prop file from with your device's file.
