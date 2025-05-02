@@ -17,12 +17,12 @@ A complete OneUI ROM Porting Guide Noob Friendly
     1. Check `plat_sepolicy_vers.txt` for which vndk version you have (ex: 30 = VNDK30, 31 = VNDK31 and so on). Note the number down as `YOURNUMBER`.
     2. Inside `vendor/etc/selinux/plat_pub_versioned.cil`, check with each line in the table below if you have it on this file, **and if not** remove all lines that have this line referenced from this file: `system_ext/etc/selinux/mapping/<YOURNUMBER>.cil`
     3. These are the lines to delete:
-    - OneUI 5/5.1              | OneUI 6/6.1/6.1.1             | OneUI 7
+    - OneUI 5/5.1              | OneUI 6/6.1/6.1.1             | OneUI 7 (WIP, might be missing more, untested)
       ------------------------:|:-----------------------------:|:-----------------------
-      audiomirroring           | hal_dsms_default              | I haven't found out yet
-      audiomirroring_exec      | hal_dsms_default_exec         |
-      audiomirroring_service   | proc_compaction_proactiveness |
-      fabriccrypto             | sbauth                        |
+      audiomirroring           | hal_dsms_default              | attiqi_app
+      audiomirroring_exec      | hal_dsms_default_exec         | ker_app
+      audiomirroring_service   | proc_compaction_proactiveness | kpp_app
+      fabriccrypto             | sbauth                        | kpp_data_file
       fabriccrypto_exec        | sbauth_exec                   |
       fabriccrypto_data_file   |                               |
       hal_dsms_service         |                               |
