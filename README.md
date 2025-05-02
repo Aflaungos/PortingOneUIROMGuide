@@ -27,7 +27,8 @@ A complete OneUI ROM Porting Guide Noob Friendly
       fabriccrypto_data_file   |                               |
       hal_dsms_service         |                               |
       uwb_regulation_skip_prop |                               |
-      - ⚠️ If you wish to kip this step and build with SELinux disabled (which I strongly do not recommend, edit the line `ro.build.selinux=1` to `ro.build.selinux=0` inside `system/build.prop`)
+      - 1. ⚠️ If you're still having SELinux issues, Inside of your device `vendor/etc` folder: Replace the `selinux` folder with the ported device's `selinux` folder.
+      - 2. ⚠️ If you wish to kip this step and build with SELinux disabled (which I strongly do not recommend, edit the line `ro.build.selinux=1` to `ro.build.selinux=0` inside `system/build.prop`)
 
 ## 3. `system_ext`: Fixing APEX
     - If comparing inside the folder `system_ext/apex` from port and your device ROM, you notice that you have a different number (which is the VNDK version of your device) you have to replace it with yours.
@@ -59,8 +60,6 @@ A complete OneUI ROM Porting Guide Noob Friendly
 
 ## 9. Done
 - Congratulations! You have finished this guide, and should probably have a working OneUI port.
-## [If having SELinux issues] Inside of your device 'vendor' folder
-- Replace the selinux folder with the ported device's selinux folder.
 
 # Special Thanks
 **Huge thanks to these people:**
