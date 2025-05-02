@@ -23,10 +23,10 @@ A complete OneUI ROM Porting Guide Noob Friendly
       audiomirroring_exec      | hal_dsms_default_exec         | ker_app
       audiomirroring_service   | proc_compaction_proactiveness | kpp_app
       fabriccrypto             | sbauth                        | kpp_data_file
-      fabriccrypto_exec        | sbauth_exec                   |
-      fabriccrypto_data_file   | ----------------------------- |
-      hal_dsms_service         | ----------------------------- |
-      uwb_regulation_skip_prop | ----------------------------- |
+      fabriccrypto_exec        | sbauth_exec                   | ?
+      fabriccrypto_data_file   | ----------------------------- | ?
+      hal_dsms_service         | ----------------------------- | ?
+      uwb_regulation_skip_prop | ----------------------------- | ?
       - 1. ⚠️ If you're still having SELinux issues, Inside of your device `vendor/etc` folder: Replace the `selinux` folder with the ported device's `selinux` folder.
       - 2. ⚠️ If you wish to kip this step and build with SELinux disabled (which I strongly do not recommend, edit the line `ro.build.selinux=1` to `ro.build.selinux=0` inside `system/build.prop`)
 
