@@ -59,7 +59,7 @@ A complete OneUI ROM Porting Guide Noob Friendly✅
 
 ## 7. Troubleshooting packaging
 - If you get a out of space error during packaging a partition or super, be sure to debloat it using CRB or inside app/priv-app! I like to use Spacesniffer to see exactly which programs are the biggest in size and if possible remove them. Do not delete any app as some of them are important for the ROM to work, do a research on each app!
-
+- As for SELinux_fs errors, open your `project folder` and inside `config` folder open `system_file_contexts.txt` from port and your ROM. Check the error related line and find it in the txt file of your ROM and copy it to the port txt file. If the line disappears you have done it correctly, continue until no lines appear!
 ## 8. Installing ⬇️
 - Extract super.img from xz file and flash using TWRP or any other custom recovery as image file in `Super` Partition
 
