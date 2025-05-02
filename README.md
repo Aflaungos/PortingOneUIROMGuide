@@ -6,7 +6,7 @@ A complete OneUI ROM Porting Guide Noob Friendly
 - Extract the stock AP from your device and the ported device (AP has the patition `super` which has `system`, `product`, `odm` and `vendor` inside).
   - ⚠️ Skip extracting `vendor_boot` from yours and ported devices.
 - Replace all the files indicated in the replaced-apps.txt: [replaced-apps.txt](https://github.com/Aflaungos/PortingOneUIROMGuide/blob/main/replaced-apps.txt) in the ported device system folder (should be under CRB Folder/Projects/<PROJECTNAME>/ROM)
-- [OPTIONAL] Open [removed-apps.txt](https://github.com/Aflaungos/PortingOneUIROMGuide/blob/main/removed-apps.txt) and delete all the apps in the list from the ported device's `system` partition.
+- [OPTIONAL/DEBLOATING] Open [removed-apps.txt](https://github.com/Aflaungos/PortingOneUIROMGuide/blob/main/removed-apps.txt) and delete all the apps in the list from the ported device's `system` partition.
   - ⚠️ Delete files of `odm`, `product` and `vendor` from your device project and of `system` from ported device project
 - Some files are missing in your `vendor` partition because they don't come with non-flagship phones. They are unessential, but if you want full compatibility and working features, you should compare your `vendor` parition with the ported device's `vendor` partition.
 ## 2. Inside the `system_ext` partition of the ported device
