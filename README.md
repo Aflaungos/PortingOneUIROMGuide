@@ -1,6 +1,11 @@
 # Porting OneUI ROM Guide
 A complete OneUI ROM Porting Guide Noob Friendly
 ⚠️ If you are too lazy to read all of this, give up or wait for a dev to actually port a ROM for you!
+# Special Thanks
+**Huge thanks to these people:**
+- **@ShaDisNX255** for his guide!
+- **@furbanoramos24** for explaining me some stuff about SELinux!
+- **@salvogiangri and collaborators** for UN1CA, which gave me the knowledge to learn how to port!
 # Tutorial
 ## 1. Unpacking
 - Extract the stock AP from your device and the ported device (AP has the patition `super` which has `system`, `product`, `odm` and `vendor` inside).
@@ -60,9 +65,3 @@ A complete OneUI ROM Porting Guide Noob Friendly
 
 ## 9. Done
 - Congratulations! You have finished this guide, and should probably have a working OneUI port.
-
-# Special Thanks
-**Huge thanks to these people:**
-- **@ShaDisNX255** for his guide!
-- **@furbanoramos24** for explaining me some stuff about SELinux!
-- **@salvogiangri** for UN1CA, which gave me the knowledge to learn how to port!
