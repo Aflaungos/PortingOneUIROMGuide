@@ -23,16 +23,16 @@ A complete OneUI ROM Porting Guide Noob Friendly✅
     2. Inside `vendor/etc/selinux/plat_pub_versioned.cil`, check with each line in the table below if you have it on this file, **and if not** remove all lines that have this line referenced from this file: `system_ext/etc/selinux/mapping/<YOURNUMBER>.cil`
     3. These are the lines to delete:
       - ⚠️ They stack with higher OneUI version, so if for example you're on UI 7, check from 5 and 6 too!   
-    - OneUI 5/5.1              | OneUI 6/6.1/6.1.1             | OneUI 7 (WIP, might be missing more, untested)
-      ------------------------:|:-----------------------------:|:-----------------------
-      audiomirroring           | hal_dsms_default              | attiqi_app
-      audiomirroring_exec      | hal_dsms_default_exec         | ker_app
-      audiomirroring_service   | proc_compaction_proactiveness | kpp_app
-      fabriccrypto             | sbauth                        | kpp_data_file
-      fabriccrypto_exec        | sbauth_exec                   | ?
-      fabriccrypto_data_file   | ----------------------------- | ?
-      hal_dsms_service         | ----------------------------- | ?
-      uwb_regulation_skip_prop | ----------------------------- | ?
+    - | OneUI 5/5.1              | OneUI 6/6.1/6.1.1             | OneUI 7                       |
+      |:------------------------:|:-----------------------------:|:-----------------------------:|
+      | audiomirroring           | hal_dsms_default              | attiqi_app                    |
+      | audiomirroring_exec      | hal_dsms_default_exec         | attiqi_app_data_file          |
+      | audiomirroring_service   | proc_compaction_proactiveness | ker_app                       |
+      | fabriccrypto             | sbauth                        | kpp_app                       |
+      | fabriccrypto_exec        | sbauth_exec                   | kpp_data_file                 |
+      | fabriccrypto_data_file   | ----------------------------- | ----------------------------- |
+      | hal_dsms_service         | ----------------------------- | ----------------------------- |
+      | uwb_regulation_skip_prop | ----------------------------- | ----------------------------- |
       - 1. ⚠️ If you're still having SELinux issues, Inside of your device `vendor/etc` folder: Replace the `selinux` folder with the ported device's `selinux` folder.
       - 2. ⚠️ If you wish to kip this step and build with SELinux disabled (which I strongly do not recommend, edit the line `ro.build.selinux=1` to `ro.build.selinux=0` inside `system/build.prop`)
 
