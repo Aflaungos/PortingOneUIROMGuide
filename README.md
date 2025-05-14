@@ -34,7 +34,7 @@ A complete OneUI ROM Porting Guide Noob Friendly✅
       | hal_dsms_service         | ----------------------------- | ----------------------------- |
       | uwb_regulation_skip_prop | ----------------------------- | ----------------------------- |
       - 1. ⚠️ If you're still having SELinux issues, Inside of your device `vendor/etc` folder: Replace the `selinux` folder with the ported device's `selinux` folder.
-      - 2. ⚠️ If you wish to kip this step and build with SELinux disabled (which I strongly do not recommend, edit the line `ro.build.selinux=1` to `ro.build.selinux=0` inside `system/build.prop`)
+      - 2. ⚠️ If you wish to skip this step and build with SELinux disabled (which I strongly do not recommend, edit the line `ro.build.selinux=1` to `ro.build.selinux=0` inside `system/build.prop`)
 
 ## 3. `system_ext`: Fixing APEX
   - If comparing inside the folder `system_ext/apex` from port and your device ROM, you notice that you have a different number (which is the VNDK version of your device) you have to replace it with yours.
